@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Lanzador {
     public static int factorial(int numero_introducido) {
         System.out.print(numero_introducido + ":");
@@ -19,6 +21,5 @@ public class Lanzador {
     public static void main(String[] args) {
         int numero_recibido = interfaz.interfaz();
         factorial(numero_recibido);
-
     }
 }
