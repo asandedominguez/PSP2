@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class interfaz {
-    public static void main (String [] args) {
+    public static int interfaz() {
         Scanner numero = new Scanner(System.in);
-        int num;
+        int num = 0;
         String salir;
 
         while (true) {
@@ -13,10 +13,13 @@ public class interfaz {
                 System.out.println("Saliendo del programa");
                 break;
             }
-            else {
+            try {
                 num = Integer.parseInt(salir);
-                System.out.println(num);
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Saliendo del programa");
             }
         }
+        return num;
     }
 }
