@@ -19,7 +19,6 @@ public class Lanzador {
         return 0;
     }
     public static void main(String[] args) {
-        int numero_recibido = interfaz.interfaz();
-        factorial(numero_recibido);
+        interfaz.interfaz();
     }
 }
