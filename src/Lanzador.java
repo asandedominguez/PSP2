@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Lanzador {
-    public static int factorial(int numero_introducido) {
+    public static int factorial(String numero_introducido) {
         try {
             ProcessBuilder comando = new ProcessBuilder("factor", String.valueOf(numero_introducido));
             Process iniciar = comando.start();
@@ -12,6 +12,11 @@ public class Lanzador {
             String linea;
             while ((linea = lectura.readLine()) != null) {
                 System.out.println(linea);
+            }
+            BufferedReader error = new BufferedReader(new InputStreamReader(iniciar.getErrorStream()));
+            String lineaError;
+            while ((lineaError = error.readLine()) != null) {
+                System.out.println("factor: " + numero_introducido + " is not a valid positive integer");
             }
             return iniciar.waitFor();
         }
