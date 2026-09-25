@@ -14,8 +14,7 @@ public class Lanzador {
                 System.out.println(linea);
             }
             BufferedReader error = new BufferedReader(new InputStreamReader(iniciar.getErrorStream()));
-            String lineaError;
-            while ((lineaError = error.readLine()) != null) {
+            while ((error.readLine()) != null) {
                 System.out.println("factor: " + numero_introducido + " is not a valid positive integer");
             }
             int bien = iniciar.waitFor();
