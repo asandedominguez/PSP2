@@ -35,8 +35,19 @@ public class interfaz {
                         }
                         Lanzador.factorial2(salir);
                     }
+                case "3":
+                    numero.nextLine();
+                    while (true) {
+                        System.out.println("Introuduce un número (o 'salir' para terminar): ");
+                        salir = numero.nextLine();
+
+                        if (salir.equalsIgnoreCase("salir")) {
+                            System.out.println("Saliendo del programa");
+                            break;
+                        }
+                        Lanzador.factorial3(salir);
+                    }
             }
-        break;
         }
     }
 }
