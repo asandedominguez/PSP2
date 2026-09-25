@@ -13,8 +13,7 @@ public class interfaz {
                 System.out.println("Saliendo del programa");
                 break;
             }
-            int entrada = Lanzador.factorial(salir);
-            System.out.println("Operación completada. Código de salida: " + entrada);
+            Lanzador.factorial(salir);
         }
         numero.close();
     }

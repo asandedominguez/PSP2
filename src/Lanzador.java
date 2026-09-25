@@ -18,7 +18,9 @@ public class Lanzador {
             while ((lineaError = error.readLine()) != null) {
                 System.out.println("factor: " + numero_introducido + " is not a valid positive integer");
             }
-            return iniciar.waitFor();
+            int bien = iniciar.waitFor();
+            System.out.println("Operación completada. Código de salida: " + bien);
+            return bien;
         }
         catch (Exception e) {
             return 1;
