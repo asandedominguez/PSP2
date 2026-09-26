@@ -69,4 +69,7 @@ public class interfaz {
             }
         }
     }
+    public static void main(String[] args) {
+        interfaz();
+    }
 }
