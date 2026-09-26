@@ -4,6 +4,10 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Lanzador {
+    // Este método recibe en primer lugar un número introducido por el usuario en formato String. Introducimos el comando factor mediantes "ProcessBuilder", y se inicia.
+    // Se hacen una serie de comprobaciones para ver sieste valor cumple las condiciones establecidas para que el comando "factor" lo descomponga, estas comprobaciones son:
+    // No dejar pasar a ningún dato que no sea integer, o en caso de que lo sea no dejar pasar los que tengan un valor negativo. Por último muestra un mensaje y un código en
+    // función de lo que le corresponda, y por supuesto el número y sus factores.
     public static int factorial(String numero_introducido) {
         try {
             String negativo = numero_introducido;
