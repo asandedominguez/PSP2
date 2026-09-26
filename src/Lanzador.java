@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Lanzador {
     public static int factorial(String numero_introducido) {
         try {
+            String negativo = numero_introducido;
+            if (numero_introducido.startsWith("-")) {
+                numero_introducido = "";
+            }
+
             ProcessBuilder comando = new ProcessBuilder("factor", numero_introducido);
             Process iniciar = comando.start();
 
@@ -16,7 +21,7 @@ public class Lanzador {
             }
             BufferedReader error = new BufferedReader(new InputStreamReader(iniciar.getErrorStream()));
             while ((error.readLine()) != null) {
-                System.out.println("factor: " + numero_introducido + " is not a valid positive integer");
+                System.out.println("factor: " + negativo + " is not a valid positive integer");
             }
             int bien = iniciar.waitFor();
             System.out.println("Operación completada. Código de salida: " + bien);
@@ -29,6 +34,11 @@ public class Lanzador {
 
     public static int factorial2(String numero_introducido) {
         try {
+            String negativo = numero_introducido;
+            if (numero_introducido.startsWith("-")) {
+                numero_introducido = "";
+            }
+
             ProcessBuilder comando = new ProcessBuilder("factor", numero_introducido);
             Process iniciar = comando.start();
 
@@ -42,7 +52,7 @@ public class Lanzador {
             }
             BufferedReader error = new BufferedReader(new InputStreamReader(iniciar.getErrorStream()));
             while ((error.readLine()) != null) {
-                System.out.println(formateo + " factor: " + numero_introducido + " is not a valid positive integer");
+                System.out.println(formateo + " factor: " + negativo + " is not a valid positive integer");
             }
             int bien = iniciar.waitFor();
             System.out.println("Operación completada. Código de salida: " + bien);
@@ -54,6 +64,10 @@ public class Lanzador {
 
     public static int factorial3(String numero_introducido) {
         try {
+            String negativo = numero_introducido;
+            if (numero_introducido.startsWith("-")) {
+                numero_introducido = "";
+            }
 
             ProcessBuilder comando = new ProcessBuilder("factor", numero_introducido);
 
@@ -76,6 +90,11 @@ public class Lanzador {
     }
     public static int factorial4(String numero_introducido) {
         try {
+            String negativo = numero_introducido;
+            if (numero_introducido.startsWith("-")) {
+                numero_introducido = "";
+            }
+
             ProcessBuilder comando = new ProcessBuilder("factor", numero_introducido);
             Process iniciar = comando.start();
 
@@ -96,7 +115,7 @@ public class Lanzador {
             }
             BufferedReader error = new BufferedReader(new InputStreamReader(iniciar.getErrorStream()));
             while ((error.readLine()) != null) {
-                System.out.println("factor: " + numero_introducido + " is not a valid positive integer");
+                System.out.println("factor: " + negativo + " is not a valid positive integer");
             }
 
             int bien = iniciar.waitFor();
